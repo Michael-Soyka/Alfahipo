@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pushd `dirname $0`
+devtools/bin/vpc /alfahipo +game /mksln games
+popd
