@@ -17,5 +17,5 @@ if not "%VS120COMNTOOLS%" == "" (
 )
 
 pushd %~dp0
-  devtools\bin\vpc.exe /alfahipo +game /%VisualStudio_Version% /mksln games-vs%VisualStudio_Version%.sln
+  devtools\bin\vpc.exe /alfahipo +game +shaders /%VisualStudio_Version% /mksln games-vs%VisualStudio_Version%.sln
 popd
