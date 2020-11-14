@@ -5,4 +5,4 @@
   * [Source shader editor](https://developer.valvesoftware.com/wiki/SourceShaderEditor/Installation)
   * [PBR](https://developer.valvesoftware.com/wiki/Adding_PBR_to_your_mod) 
   
-Discord - discord.gg/fYEKFzh
+[Discord](https://discord.gg/fYEKFzh)
