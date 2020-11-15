@@ -4,3 +4,5 @@
   * [Source Engine 2013](https://github.com/ValveSoftware/source-sdk-2013)
   * [Source shader editor](https://developer.valvesoftware.com/wiki/SourceShaderEditor/Installation)
   * [PBR](https://developer.valvesoftware.com/wiki/Adding_PBR_to_your_mod) 
+  
+[Discord](https://discord.gg/fYEKFzh)
