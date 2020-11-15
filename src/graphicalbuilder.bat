@@ -26,7 +26,7 @@ for %%A in (
 "|                                       |                                      |"
 "|   1. Standart Alfahipo                |  Hello and welcome to graphical sln  |"
 "|   2. Standart Alfahipo + Shaders      |  generator for alfahipo source mod!  |"
-"|   3. Full Alfahipo                    |                                      |"
+"|   3. Full Alfahipo (Not Work)         |                                      |"
 "|                                       |                                      |"
 "|   0. Exit                             |                                      |"
 "|                                       |                                      |"
