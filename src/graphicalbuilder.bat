@@ -26,7 +26,10 @@ for %%A in (
 "|                                       |                                      |"
 "|   1. Standart Alfahipo                |  Hello and welcome to graphical sln  |"
 "|   2. Standart Alfahipo + Shaders      |  generator for alfahipo source mod!  |"
-"|   3. Full Alfahipo (Not Work)         |                                      |"
+"|                                       |                                      |"
+"|   3. Standart Alfahipo + Experemental |                                      |"
+"|   4. Standart Alfahipo + Ex + ViVrVb  |                                      |"
+"|   5. Standart Alfahipo + Ex + VVV + P |                                      |"
 "|                                       |                                      |"
 "|   0. Exit                             |                                      |"
 "|                                       |                                      |"
@@ -41,27 +44,34 @@ if "%choice%"=="1" (
 pushd %~dp0
   devtools\bin\vpc.exe /alfahipo +game /%VisualStudio_Version% /mksln games-vs%VisualStudio_Version%.sln
 popd
-
 )
 if "%choice%"=="2" (
 
 pushd %~dp0
-  devtools\bin\vpc.exe /alfahipo +game +shaders /%VisualStudio_Version% /mksln games-vs%VisualStudio_Version%.sln
+  devtools\bin\vpc.exe /alfahipo +game +shaders /%VisualStudio_Version% /mksln games-vs%VisualStudio_Version%-S.sln
 popd
-
-
 )
 if "%choice%"=="3" (
 
 pushd %~dp0
-  devtools\bin\vpc.exe /hl2 /episodic /alfahipo +everything /%VisualStudio_Version% /mksln all-vs%VisualStudio_Version%.sln
+  devtools\bin\vpc.exe /alfahipo +game +experemental /%VisualStudio_Version% /mksln games-vs%VisualStudio_Version%-EX.sln
 popd
+)
+if "%choice%"=="4" (
 
+pushd %~dp0
+  devtools\bin\vpc.exe /alfahipo +game +experemental +mapcompilers /%VisualStudio_Version% /mksln games-vs%VisualStudio_Version%-EX-VVV.sln
+popd
+)
+if "%choice%"=="5" (
+
+pushd %~dp0
+  devtools\bin\vpc.exe /alfahipo +game +experemental +mapcompilers +phonemeextractor /%VisualStudio_Version% /mksln games-vs%VisualStudio_Version%-EX-VVV-P.sln
+popd
 )
 if "%choice%"=="0" (
 
 exit
-
 )
 echo "%choice%" is not a valid option. Please try again.
 cls
