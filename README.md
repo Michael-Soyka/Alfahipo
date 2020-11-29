@@ -5,5 +5,3 @@
   * [Source shader editor](https://developer.valvesoftware.com/wiki/SourceShaderEditor/Installation)
   * [PBR](https://developer.valvesoftware.com/wiki/Adding_PBR_to_your_mod) 
   * [Discprd RPC](https://developer.valvesoftware.com/wiki/Implementing_Discord_RPC) 
-  
-[Discord](https://discord.gg/fYEKFzh)
