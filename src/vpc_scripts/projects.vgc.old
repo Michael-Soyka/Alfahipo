@@ -25,35 +25,18 @@ $Project "mathlib"
 }
 
 //------------------ Game dlls ------------------//
-$Project "client_alfahipo"
+$Project "client"
 {
+	//"game\client\client_hl2.vpc"		[($WIN32||$X360||$POSIX) && $HL2]
+	//"game\client\client_episodic.vpc"	[($WIN32||$X360||$POSIX) && $EPISODIC]
 	"game\client\client_alfahipo.vpc"	[($WIN32||$X360||$POSIX) && $ALFAHIPO]
 }
 
-$Project "client_hl2"
+$Project "server"
 {
-	"game\client\client_hl2.vpc"		[($WIN32||$X360||$POSIX) && $HL2]
-}
-
-$Project "client_episodic"
-{
-	"game\client\client_episodic.vpc"	[($WIN32||$X360||$POSIX) && $EPISODIC]
-}
-
-
-//------------------ Server dlls ------------------//
-$Project "server_alfahipo"
-{
+	//"game\server\server_hl2.vpc"		[($WIN32||$X360||$POSIX) && $HL2]
+	//"game\server\server_episodic.vpc"	[($WIN32||$X360||$POSIX) && $EPISODIC]
 	"game\server\server_alfahipo.vpc"	[($WIN32||$X360||$POSIX) && $ALFAHIPO]
-}
-$Project "server_hl2"
-{
-	"game\server\server_hl2.vpc"		[($WIN32||$X360||$POSIX) && $HL2]
-}
-
-$Project "server_episodic"
-{
-	"game\server\server_episodic.vpc"	[($WIN32||$X360||$POSIX) && $EPISODIC]
 }
 
 $Project "game_shader_dx9"

@@ -8,65 +8,27 @@
 // Group definitions //
 ///////////////////////
 
-
-// GAME DLLS //
-$Group "gamedlls_alfahipo"
+$Group "gamedlls"
 {
-	"client_alfahipo"
-	"server_alfahipo"
+	"client"
+	"server"
 }
 
-$Group "gamedlls_hl2"
+$Group "game"
 {
-	"client_hl2"
-	"server_hl2"
-}
-
-$Group "gamedlls_episodic"
-{
-	"client_episodic"
-	"server_episodic"
-}
-
-
-	// GAME //
-$Group "game_alfahipo"
-{
-	"client_alfahipo"
+	"client"
 	"mathlib"
 	"raytrace"
-	"server_alfahipo"
-	"tier1"
-	"vgui_controls"
-}
-$Group "game_hl2"
-{
-	"client_hl2"
-	"mathlib"
-	"raytrace"
-	"server_hl2"
+	"server"
 	"tier1"
 	"vgui_controls"
 }
 
-$Group "game_episodic"
-{
-	"client_episodic"
-	"mathlib"
-	"raytrace"
-	"server_episodic"
-	"tier1"
-	"vgui_controls"
-}
-
-// SHADERS //
 $Group "shaders"
 {
 	"game_shader_dx9"
 }
 
-
-// ADITIONAL //
 $Group "experemental"
 {
 	"captioncompiler"
@@ -82,14 +44,11 @@ $Group "experemental"
 	"vtfdiff"
 }
 
-// FACEPOSER //
 $Group "phonemeextractor"
 {
 	"phonemeextractor"
 }
 
-
-// MAPCOMPILERS //
 $Group "mapcompilers"
 {
 	"vvis_dll"
@@ -99,13 +58,10 @@ $Group "mapcompilers"
 	"vbsp"
 }
 
-// SERVER //
 $Group "dedicated"
 {
 	"mathlib"
-	"server_alfahipo"
-	"server_hl2"
-	"server_episodic"
+	"server"
 	"tier1"
 }
 

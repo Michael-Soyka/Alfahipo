@@ -1,5 +1,5 @@
 #!/bin/bash
 
 pushd `dirname $0`
-devtools/bin/vpc /alfahipo +game /mksln games
+devtools/bin/vpc /alfahipo +game_alfahipo /mksln game
 popd
