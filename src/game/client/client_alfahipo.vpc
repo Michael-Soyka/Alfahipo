@@ -27,6 +27,12 @@ $Project "Client (alfahipo)"
 		$File	"c_team_objectiveresource.cpp"
 		$File	"c_team_objectiveresource.h"
 
+		$Folder "Alfahipo"
+		{
+			$File "alfahipo/devicebaseinfo.h"
+			$File "alfahipo/devicebaseinfo.cpp"
+		}
+
 		//Alfahipo HL2 Base
 		$Folder	"HL2 DLL"
 		{
