@@ -44,6 +44,6 @@ enum
 #define DMG_SNIPER			(DMG_LASTGENERICFLAG<<1)	// This is sniper damage
 #define DMG_MISSILEDEFENSE	(DMG_LASTGENERICFLAG<<2)	// The only kind of damage missiles take. (special missile defense)
 
-
+#define MIN_WOOSH_SPEED 750;
 
 #endif // HL2_SHAREDDEFS_H

@@ -373,6 +373,7 @@ BEGIN_DATADESC( CHL2_Player )
 
 	DEFINE_SOUNDPATCH( m_sndLeeches ),
 	DEFINE_SOUNDPATCH( m_sndWaterSplashes ),
+	DEFINE_SOUNDPATCH( m_pWooshSound ),
 
 	DEFINE_FIELD( m_flArmorReductionTime, FIELD_TIME ),
 	DEFINE_FIELD( m_iArmorReductionFrom, FIELD_INTEGER ),
@@ -426,6 +427,7 @@ void CHL2_Player::Precache( void )
 {
 	BaseClass::Precache();
 
+	PrecacheScriptSound("HL2Player.Woosh");
 	PrecacheScriptSound( "HL2Player.SprintNoPower" );
 	PrecacheScriptSound( "HL2Player.SprintStart" );
 	PrecacheScriptSound( "HL2Player.UseDeny" );
@@ -902,6 +904,8 @@ void CHL2_Player::PostThink( void )
 	{
 		 HandleAdmireGlovesAnimation();
 	}
+
+	WooshSoundUpdate();
 }
 
 void CHL2_Player::StartAdmireGlovesAnimation( void )
@@ -1142,6 +1146,8 @@ void CHL2_Player::Spawn(void)
 	GetPlayerProxy();
 
 	SetFlashlightPowerDrainScale( 1.0f );
+
+	CreateSounds();
 }
 
 //-----------------------------------------------------------------------------
@@ -3664,6 +3670,45 @@ void CHL2_Player::DisplayLadderHudHint()
 		UTIL_HudHintText( this, hint.Access() );
 	}
 #endif//CLIENT_DLL
+}
+
+//-----------------------------------------------------------------------------
+//
+//-----------------------------------------------------------------------------
+void CHL2_Player::WooshSoundUpdate()
+{
+	if (m_pWooshSound)
+	{
+		CSoundEnvelopeController& controller = CSoundEnvelopeController::GetController();
+		float fWooshVol = GetAbsVelocity().Length() - MIN_WOOSH_SPEED;
+
+		if (fWooshVol < 0.0f)
+		{
+			controller.SoundChangeVolume(m_pWooshSound, 0.0f, 0.1f);
+			return;
+		}
+
+		fWooshVol /= 2000.f;
+
+		if (fWooshVol > 1.0f)
+			fWooshVol = 1.0f;
+
+		controller.SoundChangeVolume(m_pWooshSound, fWooshVol, 0.1f);
+	}
+}
+
+//-----------------------------------------------------------------------------
+// Creating Sounds
+//-----------------------------------------------------------------------------
+void CHL2_Player::CreateSounds(void)
+{
+	if (!m_pWooshSound)
+	{
+		CSoundEnvelopeController& controller = CSoundEnvelopeController::GetController();
+		CPASAttenuationFilter filter(this);
+		m_pWooshSound = controller.SoundCreate(filter, entindex(), "HL2Player.Woosh");
+		controller.Play(m_pWooshSound, 0, 100);
+	}
 }
 
 //-----------------------------------------------------------------------------

@@ -106,6 +106,7 @@ public:
 	virtual void		StopLoopingSounds( void );
 	virtual void		Splash( void );
 	virtual void 		ModifyOrAppendPlayerCriteria( AI_CriteriaSet& set );
+	virtual void		CreateSounds(void);
 
 	void				DrawDebugGeometryOverlays(void);
 
@@ -269,11 +270,16 @@ public:
 
 	bool IsWeaponLowered( void ) { return m_HL2Local.m_bWeaponLowered; }
 	void HandleArmorReduction( void );
-	void StartArmorReduction( void ) { m_flArmorReductionTime = gpGlobals->curtime + ARMOR_DECAY_TIME; 
-									   m_iArmorReductionFrom = ArmorValue(); 
-									 }
+
+	void StartArmorReduction( void )
+	{
+		m_flArmorReductionTime = gpGlobals->curtime + ARMOR_DECAY_TIME; 
+		m_iArmorReductionFrom = ArmorValue(); 
+	}
 
 	void MissedAR2AltFire();
+
+	void WooshSoundUpdate();
 
 	inline void EnableCappedPhysicsDamage();
 	inline void DisableCappedPhysicsDamage();
@@ -283,6 +289,7 @@ public:
 
 	CSoundPatch *m_sndLeeches;
 	CSoundPatch *m_sndWaterSplashes;
+	CSoundPatch *m_pWooshSound;
 
 protected:
 	virtual void		PreThink( void );

@@ -1,0 +1,8 @@
+"HL2Player.Woosh"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.00"
+	"soundlevel" "SNDLVL_85dB"
+	"pitch" "100"
+	"wave" "player/player_fall_whoosh_lp_01.wav"
+}
