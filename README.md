@@ -6,3 +6,4 @@
   * [PBR](https://developer.valvesoftware.com/wiki/Adding_PBR_to_your_mod) 
   * [Discord RPC](https://developer.valvesoftware.com/wiki/Implementing_Discord_RPC)
   * [func_detail_blocker](https://developer.valvesoftware.com/wiki/Func_detail_blocker)
+  * Woosh
