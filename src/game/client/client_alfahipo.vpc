@@ -5,7 +5,6 @@
 //-----------------------------------------------------------------------------
 
 $Macro SRCDIR		"..\.."
-$Macro GAMENAME 	"alfahipo" [!$SOURCESDK]
 $Macro GAMENAME 	"mod_alfahipo" [$SOURCESDK]
 
 $Include "$SRCDIR\game\client\client_base.vpc"
@@ -14,12 +13,12 @@ $Configuration
 {
 	$Compiler
 	{
-		$AdditionalIncludeDirectories	".\hl2;.\hl2\elements;$SRCDIR\game\shared\hl2;$SRCDIR\game\shared\episodic;..\..\public;$BASE"
+		$AdditionalIncludeDirectories	".\alfahipo;.\hl2;.\hl2\elements;$SRCDIR\game\shared\hl2;$SRCDIR\game\shared\episodic;..\..\public;$BASE"
 		$PreprocessorDefinitions		"$BASE;HL2_CLIENT_DLL;HL2_EPISODIC;SOURCE_2013"
 	}
 }
 
-$Project "Client (alfahipo)"
+$Project "Client"
 {
 	$Folder	"Source Files"
 	{
@@ -27,13 +26,14 @@ $Project "Client (alfahipo)"
 		$File	"c_team_objectiveresource.cpp"
 		$File	"c_team_objectiveresource.h"
 
+		//Alfahipo 
 		$Folder "Alfahipo"
 		{
 			$File "alfahipo/devicebaseinfo.h"
 			$File "alfahipo/devicebaseinfo.cpp"
 		}
 
-		//Alfahipo HL2 Base
+		//Alfahipo [HL2 Base]
 		$Folder	"HL2 DLL"
 		{
 			$File	"$SRCDIR\game\shared\hl2\basehlcombatweapon_shared.cpp"
@@ -133,24 +133,6 @@ $Project "Client (alfahipo)"
 			$File	"$SRCDIR\game\shared\hl2\survival_gamerules.cpp"
 			$File	"hl2\vgui_rootpanel_hl2.cpp"
 			$File	"episodic\c_npc_puppet.cpp"
-		}
-
-		//Alfahipo ShaderEditor
-		$Folder "Shader Editor"
-		{
-			$Folder	"Header Files"
-			{
-				$File	"$SRCDIR\game\client\shadereditor\isedit_modelrender.h"
-				$File	"$SRCDIR\game\client\shadereditor\ivshadereditor.h"
-				$File	"$SRCDIR\game\client\shadereditor\shadereditorsystem.h"
-				$File	"$SRCDIR\game\client\shadereditor\sedit_modelrender.h"
-			}
-
-			$Folder	"Implementation Files"
-			{
-				$File	"$SRCDIR\game\client\shadereditor\shadereditorsystem.cpp"
-				$File	"$SRCDIR\game\client\shadereditor\sedit_modelrender.cpp"
-			}
 		}
 	}
 	

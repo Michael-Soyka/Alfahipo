@@ -29,11 +29,8 @@ for %%A in (
 "|   2. Alfahipo [Shaders]                |  generator for alfahipo source mod!   |"
 "|                                        |                                       |"
 "|   3. Alfahipo [Experemental]           |                                       |"
-"|   4. Alfahipo [Ex + ViVrVb]            |                                       |"
-"|   5. Alfahipo [Ex + VVV + P]           |                                       |"
-"|                                        |                                       |"
-"|   6. Standard [HL2 + EP2 + Shaders]    |                                       |"
-"|   7. Experementl [HL2 + EP + AH + Sdr] |                                       |"
+"|   4. Alfahipo [Ex + TOOLS ]            |                                       |"
+"|   5. Alfahipo [Ex + TOOLS + Phoneme]   |                                       |"
 "|                                        |                                       |"
 "|   0. Exit                              |                                       |"
 "|                                        |                                       |"
@@ -71,18 +68,6 @@ if "%choice%"=="5" (
 
 pushd %~dp0
   devtools\bin\vpc.exe /alfahipo +game_alfahipo +experemental +mapcompilers +phonemeextractor /%VisualStudio_Version% /mksln game-vs%VisualStudio_Version%-EX-VVV-P.sln
-popd
-)
-if "%choice%"=="6" (
-
-pushd %~dp0
-  devtools\bin\vpc.exe /alfahipo /hl2 /episodic +game_hl2 +game_episodic +shaders /%VisualStudio_Version% /mksln game-vs%VisualStudio_Version%-HL2_EP_SDR.sln
-popd
-)
-if "%choice%"=="7" (
-
-pushd %~dp0
-  devtools\bin\vpc.exe /alfahipo /hl2 /episodic +game_alfahipo +game_hl2 +game_episodic +shaders /%VisualStudio_Version% /mksln game-vs%VisualStudio_Version%-HL2-EP-AH_SDR.sln
 popd
 )
 

@@ -10,51 +10,19 @@
 
 
 // GAME DLLS //
-$Group "gamedlls_alfahipo"
+$Group "gamedlls"
 {
-	"client_alfahipo"
-	"server_alfahipo"
+	"client"
+	"server"
 }
 
-$Group "gamedlls_hl2"
+// GAME //
+$Group "game"
 {
-	"client_hl2"
-	"server_hl2"
-}
-
-$Group "gamedlls_episodic"
-{
-	"client_episodic"
-	"server_episodic"
-}
-
-
-	// GAME //
-$Group "game_alfahipo"
-{
-	"client_alfahipo"
+	"client"
 	"mathlib"
 	"raytrace"
-	"server_alfahipo"
-	"tier1"
-	"vgui_controls"
-}
-$Group "game_hl2"
-{
-	"client_hl2"
-	"mathlib"
-	"raytrace"
-	"server_hl2"
-	"tier1"
-	"vgui_controls"
-}
-
-$Group "game_episodic"
-{
-	"client_episodic"
-	"mathlib"
-	"raytrace"
-	"server_episodic"
+	"server"
 	"tier1"
 	"vgui_controls"
 }
@@ -64,7 +32,6 @@ $Group "shaders"
 {
 	"game_shader_dx9"
 }
-
 
 // ADITIONAL //
 $Group "experemental"
@@ -103,9 +70,7 @@ $Group "mapcompilers"
 $Group "dedicated"
 {
 	"mathlib"
-	"server_alfahipo"
-	"server_hl2"
-	"server_episodic"
+	"server"
 	"tier1"
 }
 

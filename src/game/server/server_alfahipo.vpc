@@ -5,7 +5,6 @@
 //-----------------------------------------------------------------------------
 
 $Macro SRCDIR		"..\.."
-$Macro GAMENAME 	"alfahipo" [!$SOURCESDK]
 $Macro GAMENAME 	"mod_alfahipo" [$SOURCESDK]
 
 $Include "$SRCDIR\game\server\server_base.vpc"
@@ -19,7 +18,7 @@ $Configuration
 	}
 }
 
-$Project "Server (alfahipo)"
+$Project "Server"
 {
 	$Folder	"Source Files"
 	{

@@ -13,6 +13,7 @@
 *.ilk
 *.lastbuildstate
 vc100.pdb
+vc120.pdb
 ipch
 *.sdf
 *.opensdf
@@ -36,6 +37,9 @@ client.lib
 server.pdb
 server.dll
 server.lib
+
+game_shader_dx9.dll
+game_shader_dx9.pdb
 
 client.so
 client.so.dbg

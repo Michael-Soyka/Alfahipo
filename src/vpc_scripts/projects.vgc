@@ -21,58 +21,43 @@ $Project "fgdlib"
 
 $Project "mathlib"
 {
-	"mathlib\mathlib.vpc" [$WINDOWS||$X360||$POSIX]
+	"mathlib\mathlib.vpc" [$WIN32||$X360||$POSIX]
+}
+
+$Project "raytrace"
+{
+	"raytrace\raytrace.vpc" [$WIN32||$X360||$POSIX]
 }
 
 //------------------ Game dlls ------------------//
-$Project "client_alfahipo"
+$Project "client"
 {
 	"game\client\client_alfahipo.vpc"	[($WIN32||$X360||$POSIX) && $ALFAHIPO]
 }
 
-$Project "client_hl2"
-{
-	"game\client\client_hl2.vpc"		[($WIN32||$X360||$POSIX) && $HL2]
-}
-
-$Project "client_episodic"
-{
-	"game\client\client_episodic.vpc"	[($WIN32||$X360||$POSIX) && $EPISODIC]
-}
-
-
 //------------------ Server dlls ------------------//
-$Project "server_alfahipo"
+$Project "server"
 {
 	"game\server\server_alfahipo.vpc"	[($WIN32||$X360||$POSIX) && $ALFAHIPO]
 }
-$Project "server_hl2"
-{
-	"game\server\server_hl2.vpc"		[($WIN32||$X360||$POSIX) && $HL2]
-}
 
-$Project "server_episodic"
-{
-	"game\server\server_episodic.vpc"	[($WIN32||$X360||$POSIX) && $EPISODIC]
-}
-
+//------------------ Shaders dlls ------------------//
 $Project "game_shader_dx9"
 {
-	//"materialsystem\stdshaders\game_shader_dx9_hl2.vpc" [$HL2]
-	//"materialsystem\stdshaders\game_shader_dx9_episodic.vpc"  [$EPISODIC]
 	"materialsystem\stdshaders\game_shader_dx9_alfahipo.vpc"  [$ALFAHIPO]
+}
+
+//------------------ VGUI dlls ------------------//
+$Project "vgui_controls"
+{
+	"vgui2\vgui_controls\vgui_controls.vpc" [$WIN32||$X360||$POSIX]
 }
 
 //------------------ Additionals dlls ------------------//
 
 $Project "tier1"
 {
-	"tier1\tier1.vpc" 	[$WINDOWS || $X360||$POSIX]
-}
-
-$Project "vgui_controls"
-{
-	"vgui2\vgui_controls\vgui_controls.vpc" [$WIN32||$X360||$POSIX]
+	"tier1\tier1.vpc" 	[$WIN32||$X360||$POSIX]
 }
 
 $Project "phonemeextractor"
@@ -94,11 +79,6 @@ $Project "height2normal"
 $Project "motionmapper"
 {
 	"utils\motionmapper\motionmapper.vpc" [$WIN32]
-}
-
-$Project "raytrace"
-{
-	"raytrace\raytrace.vpc" [$WIN32||$X360||$POSIX]
 }
 
 $Project "qc_eyes"
