@@ -336,7 +336,7 @@ static ConVar s_cl_team("cl_team", "default", FCVAR_USERINFO|FCVAR_ARCHIVE, "Def
 static ConVar s_cl_class("cl_class", "default", FCVAR_USERINFO|FCVAR_ARCHIVE, "Default class when joining a game");
 
 // Discord RPC
-static ConVar cl_discord_appid("cl_discord_appid", "715940607041732688", FCVAR_DEVELOPMENTONLY | FCVAR_CHEAT);
+static ConVar cl_discord_appid("cl_discord_appid", "823892353243676703", FCVAR_DEVELOPMENTONLY | FCVAR_CHEAT);
 static int64_t startTimestamp = time(0);
 
 #ifdef HL1MP_CLIENT_DLL
@@ -1152,10 +1152,8 @@ int CHLClient::Init( CreateInterfaceFn appSystemFactory, CreateInterfaceFn physi
 		discordPresence.state = "In-Game";
 		discordPresence.details = "Main Menu";
 		discordPresence.startTimestamp = startTimestamp;
-		discordPresence.largeImageKey = "icon";
-		discordPresence.largeImageText = "HalfOfMe ";
-		discordPresence.smallImageKey = "alfahipobaseicon";
-		discordPresence.smallImageText = "Alfahipo Base";
+		discordPresence.largeImageKey = "alfahipobaseicon";
+		discordPresence.largeImageText = "Alfahipo Base";
 		Discord_UpdatePresence(&discordPresence);
 	}
 
@@ -1709,10 +1707,8 @@ void CHLClient::LevelInitPreEntity( char const* pMapName )
 		discordPresence.state = "In-Game";
 		sprintf(buffer, "Map: %s", pMapName);
 		discordPresence.details = buffer;
-		discordPresence.largeImageKey = "icon";
-		discordPresence.largeImageText = "HalfOfMe ";
-		discordPresence.smallImageKey = "alfahipobaseicon";
-		discordPresence.smallImageText = "Alfahipo Base";
+		discordPresence.largeImageKey = "alfahipobaseicon";
+		discordPresence.largeImageText = "Alfahipo Base";
 		Discord_UpdatePresence(&discordPresence);
 	}
 
@@ -1816,10 +1812,8 @@ void CHLClient::LevelShutdown( void )
 		discordPresence.state = "In-Game";
 		discordPresence.details = "Main Menu";
 		discordPresence.startTimestamp = startTimestamp;
-		discordPresence.largeImageKey = "icon";
-		discordPresence.largeImageText = "HalfOfMe ";
-		discordPresence.smallImageKey = "alfahipobaseicon";
-		discordPresence.smallImageText = "Alfahipo Base";
+		discordPresence.largeImageKey = "alfahipobaseicon";
+		discordPresence.largeImageText = "Alfahipo Base";
 		Discord_UpdatePresence(&discordPresence);
 	}
 

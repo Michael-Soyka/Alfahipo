@@ -2,8 +2,7 @@
 
 * Alfahipo structure:
   * [Source Engine 2013](https://github.com/ValveSoftware/source-sdk-2013)
-  * [Source shader editor](https://developer.valvesoftware.com/wiki/SourceShaderEditor/Installation)
-  * [PBR](https://developer.valvesoftware.com/wiki/Adding_PBR_to_your_mod) 
+  * [PBR](https://developer.valvesoftware.com/wiki/Adding_PBR_to_your_mod) - I planned to remove this.
   * [Discord RPC](https://developer.valvesoftware.com/wiki/Implementing_Discord_RPC)
   * [func_detail_blocker](https://developer.valvesoftware.com/wiki/Func_detail_blocker)
   * Woosh
